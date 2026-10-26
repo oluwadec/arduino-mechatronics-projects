@@ -1,49 +1,98 @@
-# Mechatronics Beginner Projects Pack
-**Sensors · Actuators · Closed-Loop Control · CAD Basics**
+# Mechatronics Projects Pack
+**Closed-Loop Control · Sensors · Actuators · Practical Robotics**
 
-Complete, ready-to-build package for four foundational mechatronics projects. Designed for students starting early (first-year / early second-year). Each project produces measurable performance data you can put on a resume and discuss in interviews.
-
-## Projects Included
-
-| # | Project | Core Skills | Estimated Cost | Time |
-|---|---------|-------------|----------------|------|
-| 01 | Closed-Loop DC Motor Position Control + PID | Encoder feedback, PID tuning, rise time / overshoot / steady-state error | $25–40 | 1–2 weeks |
-| 02 | Differential-Drive Robot (Line / Obstacle) | Dual-motor PID speed control, IR/ultrasonic sensors, chassis CAD | $40–70 | 2–3 weeks |
-| 03 | Self-Balancing Robot / Inverted Pendulum | IMU, unstable plant, state feedback / PID, reaction dynamics | $50–90 | 3–5 weeks |
-| 04 | 2–3 DOF Servo Arm + Gripper | Kinematics basics, servo control, simple pick-and-place | $30–55 | 1–2 weeks |
-
-## Recommended Build Order
-1. **01 – DC Motor PID** (learn closed-loop fundamentals cleanly)
-2. **04 – Servo Arm** (quick mechanical win + CAD practice)
-3. **02 – Differential Drive** (combine sensors + dual actuators)
-4. **03 – Self-Balancing** (hardest control problem — do last)
-
-## Shared Requirements
-- Arduino Uno / Nano **or** ESP32 (recommended for later projects)
-- Basic hand tools, multimeter, soldering iron
-- Access to a 3D printer (or laser cutter) is highly recommended but not mandatory for first versions
-- Computer with Arduino IDE (or PlatformIO) + serial plotter
-
-## How to Use This Repository
-- Each project folder contains:
-  - `README.md` – full build guide, wiring, tuning, test procedure
-  - `BOM.md` – parts list with approximate prices & alternatives
-  - Arduino / ESP32 code (well-commented)
-  - CAD notes / OpenSCAD templates where useful
-  - Data-logging & analysis guidance
-- `shared/` contains reusable libraries and common CAD templates
-
-## Portfolio Advice
-For every project:
-1. Record a short video (30–60 s) showing the system working.
-2. Capture serial data of the key metrics (rise time, overshoot, etc.).
-3. Plot the results and put them in the GitHub README.
-4. Write 3–5 sentences on what failed, how you fixed it, and what you would improve.
-
-This turns a hobby build into interview material.
-
-## License
-Open for educational use. Modify freely. Credit appreciated but not required.
+A structured collection of four foundational mechatronics projects designed to build real competence in closed-loop control and robotic systems.  
+Each project is intentionally scoped so that a dedicated student can complete it, measure performance, and discuss engineering trade-offs in interviews.
 
 ---
-**Start with Project 01.** Open `01-dc-motor-pid/README.md` now.
+
+## Projects Overview
+
+| # | Project | Core Skills Developed | Difficulty | Est. Time |
+|---|---------|-----------------------|------------|-----------|
+| 01 | **Closed-Loop DC Motor Position Control + PID** | Encoder feedback, discrete PID, rise time / overshoot / steady-state error | Intermediate | 1–2 weeks |
+| 02 | **Differential-Drive Robot** | Dual-motor speed control, sensor integration, basic mobile robotics | Intermediate | 2–3 weeks |
+| 03 | **Self-Balancing Robot (Inverted Pendulum)** | Unstable plant control, IMU fusion concepts, aggressive PID / state feedback thinking | Advanced | 3–5 weeks |
+| 04 | **2–3 DOF Servo Arm + Gripper** | Joint control, basic kinematics intuition, pick-and-place logic | Beginner–Intermediate | 1–2 weeks |
+
+### Recommended Build Order
+1. **01 – DC Motor PID** → Learn clean closed-loop fundamentals first  
+2. **04 – Servo Arm** → Quick mechanical win + CAD practice  
+3. **02 – Differential Drive** → Combine multiple actuators + sensors  
+4. **03 – Self-Balancing** → Hardest control problem (do last)
+
+---
+
+## Repository Structure
+
+```
+arduino-mechatronics-projects/
+├── 01-dc-motor-pid/
+│   ├── README.md          # Full build + tuning guide
+│   ├── BOM.md             # Parts list with alternatives
+│   ├── motor_pid_position.ino
+│   └── cad/
+├── 02-differential-drive-robot/
+├── 03-self-balancing/
+├── 04-servo-arm/
+├── shared/
+│   ├── analysis/          # Python plotting helpers
+│   └── cad-templates/
+└── README.md
+```
+
+Each project folder contains:
+- Detailed README (wiring, theory notes, tuning procedure, expected results)
+- Bill of Materials
+- Well-commented firmware
+- CAD notes / templates where applicable
+
+---
+
+## Engineering Focus
+
+These projects emphasize **measurable control performance**, not just “it works”:
+
+- Rise time
+- Overshoot percentage
+- Settling time
+- Steady-state error
+- Disturbance rejection (where applicable)
+
+Students are expected to log data, plot results, and document what failed and how it was fixed. This transforms hobby builds into credible engineering evidence.
+
+---
+
+## Hardware Notes
+
+- Primary platform: Arduino Uno / Nano (ESP32 recommended for later projects)
+- Access to a 3D printer is highly useful but not mandatory for first versions
+- Multimeter and basic hand tools required
+
+---
+
+## Portfolio Advice
+
+For maximum impact:
+1. Record a short (30–60s) video of each system working under load/disturbance.
+2. Capture and plot key performance metrics.
+3. Write a short “Lessons Learned” section covering failures and iterations.
+4. Keep the GitHub README as the single source of truth.
+
+---
+
+## License
+
+Open for educational use. Modify and extend freely.
+
+---
+
+## Author
+
+**Aboderin Logo** (`oluwadec`)  
+Mechatronics Engineering Student  
+Building practical competence in control systems and robotics software.
+
+---
+
+**Start here →** [`01-dc-motor-pid/README.md`](01-dc-motor-pid/README.md)
